@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, TextField } from "@material-ui/core";
-import {v4 as uuid} from "uuid"; 
+const { v4: uuidv4 } = require('uuid');
 
 function TodoForm({addTodo}) {
   const [todo, setTodo] = useState({
@@ -16,7 +16,7 @@ function TodoForm({addTodo}) {
   function handleSubmit(e){
       e.preventDefault();
       if(todo.task.trim()){
-          addTodo({...todo, id: uuid.v4()});
+          addTodo({...todo, id: uuidv4()});
           // Reseting the form:
           setTodo({...todo, task: "" });
       }

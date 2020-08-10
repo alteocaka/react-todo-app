@@ -14,7 +14,7 @@ function App() {
     if (storageTodos) {
       setTodos(storageTodos);
     }
-  }, [todos]);
+  }, []);
 
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos));
