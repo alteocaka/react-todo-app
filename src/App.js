@@ -44,8 +44,14 @@ function App() {
 
   return (
     <div className="App">
-      <Typography style={{ padding: 16 }} variant="h1">
-        React Todo
+      <Typography variant="h1">React Todo</Typography>
+      <Typography
+        style={{ marginBottom: 30, opacity: 0.8 }}
+        variant="h5"
+        color="secondary"
+        gutterBottom
+      >
+        by Alteo Caka &copy;
       </Typography>
       <TodoForm addTodo={addTodo} />
       <TodoList
